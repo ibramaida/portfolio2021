@@ -321,7 +321,14 @@
                 <h2>Get In Contact</h2>
                 <div class="row">
                     <form action="https://formsubmit.co/2d11eee286929950eed401f3b9d751c8" method="POST" class="contact-form">
-                        
+                            <!-- stop spam -->
+                            <input type="text" name="_honey" style="display: none;">
+
+                            <!-- stop captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <!-- add custom next page -->
+                            <input type="hidden" name="_next" value="https://ibramaida.github.io/portfolio2021/success.html">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" placeholder="your name" required>
                             <div class="error-hint hidden">This field is required</div>
