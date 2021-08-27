@@ -894,6 +894,22 @@ ul{
     font-size: 1.1rem;
   }
 
+  .msg-box {
+    padding: 10rem 2rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .msg-box p {
+    line-height: 1.6;
+  }
+
+  .msg-box a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--hover-color);
+  }
+
   .hidden {
     display: none;
   }
