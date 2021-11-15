@@ -815,31 +815,31 @@ ul{
   }
 
   .header-one {
-      background-image: url("./images/work/projects-img/spacedestination.png");
+      background-image: url("../images/work/projects-img/spacedestination.png");
       background-position: top;
 
   }
 
   .header-two {
-      background-image: url("./images/work/projects-img/images_gallery.png");
+      background-image: url("../images/work/projects-img/images_gallery.png");
   }
 
   .header-three {
-      background-image: url("./images/work/projects-img/glassmorphism.png");
+      background-image: url("../images/work/projects-img/glassmorphism.png");
       background-position: top;
   }
 
   .header-four {
-      background-image: url("./images/work/projects-img/portfoliomodalcover.png");
+      background-image: url("../images/work/projects-img/portfoliomodalcover.png");
       background-position: bottom;
   }
 
   .header-five {
-      background-image: url("./images/work/projects-img/tindog.png");
+      background-image: url("../images/work/projects-img/tindog.png");
   }
 
   .header-sex {
-      background-image: url("./images/work/projects-img/ecommercehome.png");
+      background-image: url("../images/work/projects-img/ecommercehome.png");
       background-position: top;
   }
 
