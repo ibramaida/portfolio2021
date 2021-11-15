@@ -1,6 +1,6 @@
 
 const menuBtn = document.querySelector('.menu-btn');
-console.log(menuBtn);
+
 const nav = document.querySelector('.nav-primary')
 
 let isOpen = false;

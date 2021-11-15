@@ -513,20 +513,36 @@ ul{
         margin-bottom: 3rem;
     }
 
-    .btn-cta{
-        display: inline-block;
-        text-decoration: none;
-        border: 1px solid var(--hover-color);
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
+    .btn{
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: .75rem 2rem ;
+    }
+
+    .btn-cta, .btn-code{
+        border: 1px solid var(--hover-color);       
         color: var(--hover-color);
-        padding: .75rem 2rem ;
     }
 
     .btn-cta:hover,
-    .btn-cta:focus{
+    .btn-cta:focus,
+    .btn-code:hover,
+    .btn-code:focus{
         background-color: var(--hover-color);
         color: var(--BG-body);
+    }
+
+    .btn-online{
+        background-color: var(--hover-color);
+        color: var(--BG-body);
+    }
+
+    .btn-online:hover,
+    .btn-online:focus{
+      opacity: .7;
     }
 
     /* about style */
@@ -667,6 +683,7 @@ ul{
       font-family: 'Roboto', sans-serif;
       font-size: 2rem;
       text-align: center;
+      text-transform: capitalize;
       margin-bottom: 1rem;
   }
 
@@ -678,7 +695,7 @@ ul{
       display: grid;
       gap: .5rem;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
   }
 
   .featured {
@@ -688,6 +705,7 @@ ul{
 
   .featured .work-title {
       font-size: 2em;
+      text-transform: capitalize;
   }
 
   .featured .work-desc {
@@ -698,17 +716,17 @@ ul{
       font-size: 1em;
   }
   .work-item {
-      
+      aspect-ratio: 4/3;
       position: relative;
       overflow: hidden;
   }
 
-  .work-item img {
+  /* .work-item img {
       width: 100%;
       display: block;
       height: 100%;
       object-fit: cover;
-  }
+  } */
 
   .work-item figcaption {
       position: absolute;
@@ -761,7 +779,7 @@ ul{
       left: 10vw;
       right: 10vw;
       background-color: var(--BG-navbar);
-      padding: 3em 2em;
+      padding: 3em 0;
       z-index: 10;
       box-shadow: 0 0 0 10em rgba(0, 0, 0, .5);
       overflow-y: scroll;
@@ -786,7 +804,7 @@ ul{
 
   .close-modal i {
       color: var(--hover-color-2);
-      
+      font-size: 1.5rem;
   }
 
   .work-header {
@@ -797,27 +815,36 @@ ul{
   }
 
   .header-one {
-      background-image: url(/Images/work/projects-img/project1.png);
+      background-image: url("/images/work/projects-img/spacedestination.png");
+      background-position: top;
+
   }
 
   .header-two {
-      background-image: url(/Images/work/projects-img/images_gallery.png);
+      background-image: url("/images/work/projects-img/images_gallery.png");
   }
 
   .header-three {
-      background-image: url(/Images/work/projects-img/project3.png);
+      background-image: url("/images/work/projects-img/glassmorphism.png");
+      background-position: top;
   }
 
   .header-four {
-      background-image: url(/Images/work/projects-img/project4.png);
+      background-image: url("/images/work/projects-img/portfoliomodalcover.png");
+      background-position: bottom;
   }
 
   .header-five {
-      background-image: url(/Images/work/projects-img/project5.png);
+      background-image: url("/images/work/projects-img/tindog.png");
+  }
+
+  .header-sex {
+      background-image: url("/images/work/projects-img/ecommercehome.png");
+      background-position: top;
   }
 
   .work-title-box {
-      background: rgba(10, 228, 195, .7);
+      background: rgba( 24, 24, 24, .8);
       padding: 3em;
       width: 70%;
       color: var(--BG-navbar);
@@ -832,12 +859,18 @@ ul{
 
   .work-content p {
       padding-bottom: 1em;
+      line-height: 1.4;
+  }
+
+  .btn-container{
+    display: flex;
+    gap: 2rem;
   }
 
   .work-full-width {
       width: 100vw !important;
       max-width: initial;
-      height: 20vh;
+      height: 50vh;
       
       margin: 2em calc(50% - 50vw);
       object-fit: cover;
@@ -1019,6 +1052,10 @@ ul{
       .welcome-text h1 {
         font-size: 2.5rem;
       }
+
+      .work-full-width {
+        object-fit: contain;
+      }
     }
 
     @media (max-width: 700px) {
@@ -1164,6 +1201,19 @@ ul{
       .featured {
           grid-column: 1 ;
           grid-row: 1 ;
+      }
+
+      .work-modal{
+        inset: .5rem;
+      }
+
+      .close-modal{
+        top: 15vh;
+        left: 1rem;
+      }
+
+      .btn-container{
+        justify-content: center;
       }
 
   }
