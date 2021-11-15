@@ -815,7 +815,7 @@ ul{
   }
 
   .header-one {
-      background-image: url("/images/work/projects-img/spacedestination.png");
+      background-image: url(/images/work/projects-img/spacedestination.png);
       background-position: top;
 
   }
