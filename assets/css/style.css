@@ -577,10 +577,11 @@ ul{
     }
     
     .from-left,
-    .from-right{
+    .from-right,
+    .from-bottom{
         transition: 
-            opacity 400ms ease-in, 
-            transform 600ms ease-in;
+            opacity 400ms, 
+            transform 1000ms ease-out;
     }
 
     .from-left.appear,
@@ -1088,6 +1089,14 @@ ul{
 
     .about-text h2 {
       text-align: center;
+    }
+
+    .from-right{
+      transform: translateX(0);
+    }
+
+    .from-bottom {
+      transform: translateY(30%);
     }
 
     .work-items {
