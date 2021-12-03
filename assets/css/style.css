@@ -4,8 +4,8 @@
 :root {
     --BG-body: #1D1D1D;
     --BG-logo: #070707;
-    --hover-color-2: #FD1056;
-    --hover-color: #0AE4C3;
+    --primary-color-2: #FD1056;
+    --primary-color: #0AE4C3;
     --font-color: #909096;
     --BG-navbar: #181818;
     font-size: 18px;
@@ -419,7 +419,7 @@ ul{
     }
     
     .nav-primary-items li.active .scroll{
-        color: var(--hover-color);
+        color: var(--primary-color);
     }
     
     .nav-primary-items .scroll{
@@ -427,7 +427,7 @@ ul{
         color: var(--font-color);
     }
     .nav-primary-items .scroll:hover{
-        color: var(--hover-color);
+        color: var(--primary-color);
     }
     
     .nav-social-itmes li{
@@ -438,7 +438,7 @@ ul{
         color: var(--font-color);
     }
     .nav-social-itmes i:hover{
-        color: var(--hover-color);
+        color: var(--primary-color);
     }
 
     a[data-hover] {
@@ -451,7 +451,7 @@ ul{
         font-family: Arial, Helvetica, sans-serif;
         display: block;
         position: absolute;
-        color: var(--hover-color);
+        color: var(--primary-color);
         padding: .5rem 1.5rem;
         white-space: nowrap;
         bottom: -6px;
@@ -465,6 +465,69 @@ ul{
         transform: scale(1);
     }
 
+    /* color navigation */
+
+    .btn-color-menu{
+      position: fixed;
+      top: 130px;
+      right: -10px;
+      width: 3rem;
+      aspect-ratio: 1;
+      transform: skewX(-15deg);
+      background-color: var(--primary-color);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .color-navigation {
+      position: fixed;
+      top: 130px;
+      right: 0;
+      z-index: 5;
+      padding-right: 4rem;
+      padding-left: 1rem;
+      line-height: .5;
+      display: flex;
+      gap: 1rem;
+      background-color: rgba(33, 33, 33, .7);
+      transform: translateX(100%);
+      transition: all 350ms ease-in-out;
+    }
+
+    .color-navigation.show {
+      transform: translateX(0);
+    }
+
+    .color-item {
+      width: 1.5rem;
+      height: 3rem;
+      transform: skewX(-15deg);
+      cursor: pointer;
+    }
+
+    .main {
+      background-color: #0AE4C3;
+    }
+
+    .purple {
+      background-color: #8E05C2;
+    }
+
+    .navy {
+      background-color: #3D2C8D;
+    }
+
+    .blue {
+      background-color: #1597BB;
+    }
+
+    .peach {
+      background-color: #FA8072;
+    }
+
+    .red {
+      background-color: #CF455C;
+    }
 
     /* welcome section */
 
@@ -523,20 +586,20 @@ ul{
     }
 
     .btn-cta, .btn-code{
-        border: 1px solid var(--hover-color);       
-        color: var(--hover-color);
+        border: 1px solid var(--primary-color);       
+        color: var(--primary-color);
     }
 
     .btn-cta:hover,
     .btn-cta:focus,
     .btn-code:hover,
     .btn-code:focus{
-        background-color: var(--hover-color);
+        background-color: var(--primary-color);
         color: var(--BG-body);
     }
 
     .btn-online{
-        background-color: var(--hover-color);
+        background-color: var(--primary-color);
         color: var(--BG-body);
     }
 
@@ -636,13 +699,13 @@ ul{
       margin-top: .4rem;
       border: 1px solid #565656;
       border-radius: 5px;
-      box-shadow: 0 0 10px var(--hover-color);
+      box-shadow: 0 0 10px var(--primary-color);
     }
 
     .percentage {
       display: block;
       height: 100%;
-      background-color: var(--hover-color-2);
+      background-color: var(--primary-color-2);
       border-radius: 5px;
       animation: progress 1500ms ease-in 1;
     }
@@ -767,7 +830,7 @@ ul{
   }
 
   .work-link {
-      color: var(--hover-color);
+      color: var(--primary-color);
       text-decoration: none;
   }
 
@@ -804,7 +867,7 @@ ul{
   }
 
   .close-modal i {
-      color: var(--hover-color-2);
+      color: var(--primary-color-2);
       font-size: 1.5rem;
   }
 
@@ -920,7 +983,7 @@ ul{
 
   input[type=text]:focus
   textarea:focus {
-    outline: 1px solid var(--hover-color);
+    outline: 1px solid var(--primary-color);
   }
 
   .contact label {
@@ -942,7 +1005,7 @@ ul{
   .msg-box a {
     text-decoration: none;
     font-size: 1rem;
-    color: var(--hover-color);
+    color: var(--primary-color);
   }
 
   .hidden {
@@ -965,7 +1028,7 @@ ul{
 
   .btn-send {
     font-family: 'Lato', sans-serif;
-    background-color: var(--hover-color);
+    background-color: var(--primary-color);
     padding: .5rem 2rem;
     font-size: 1.2rem;
     cursor: pointer;
@@ -1160,7 +1223,7 @@ ul{
       .hamburger {
         width: 30px;
         height: 2px;
-        background-color: var(--hover-color);
+        background-color: var(--primary-color);
         border-radius: 100px;
         transition: all .5s ease-in-out;
     }
@@ -1172,7 +1235,7 @@ ul{
           position: absolute;
           width: 30px;
           height: 2px;
-          background-color: var(--hover-color);
+          background-color: var(--primary-color);
           border-radius: 100px;
           transition: all .5s ease-in-out;
       }
