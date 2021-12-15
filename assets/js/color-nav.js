@@ -4,7 +4,7 @@ const colorNav = document.querySelector('.color-navigation')
 const colorItems = document.querySelectorAll('.color-item')
 
 window.onload = () => {
-    document.documentElement.style.setProperty('--primary-color', localStorage.getItem('--primary-color'))
+    document.documentElement.style.setProperty('--hue', localStorage.getItem('--hue'))
 }
 
 const  closeNav = () => {
@@ -34,11 +34,20 @@ window.addEventListener('click', e => {
     }
 })
 
+// colorItems.forEach(btn => {
+//     btn.addEventListener('click', e => {
+//         let styles = getComputedStyle(e.target)
+//         let bgValue = styles.getPropertyValue('background-color')
+//         document.documentElement.style.setProperty('--primary-color', bgValue)
+//         localStorage.setItem('--primary-color', bgValue)
+//     })
+// })
+
 colorItems.forEach(btn => {
     btn.addEventListener('click', e => {
         let styles = getComputedStyle(e.target)
-        let bgValue = styles.getPropertyValue('background-color')
-        document.documentElement.style.setProperty('--primary-color', bgValue)
-        localStorage.setItem('--primary-color', bgValue)
+        let hue = styles.getPropertyValue('--hue')
+        document.documentElement.style.setProperty('--hue', hue)
+        localStorage.setItem('--hue', hue)
     })
 })
