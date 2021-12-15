@@ -108,6 +108,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
@@ -580,9 +581,15 @@ ul{
 
     /* color navigation */
 
+    .color-navigation-container{
+      position: relative;
+      top: 130px;
+      right: 0;
+    }
+
     .btn-color-menu{
       position: absolute;
-      top: 130px;
+      top: 0;
       right: -10px;
       width: 3rem;
       aspect-ratio: 1;
@@ -593,8 +600,8 @@ ul{
     }
 
     .color-navigation {
-      position: fixed;
-      top: 130px;
+      position: absolute;
+      top: 0;
       right: 0;
       z-index: 5;
       padding-right: 4rem;
