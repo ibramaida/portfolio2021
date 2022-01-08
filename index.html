@@ -84,7 +84,7 @@
     
     <main>
                                                                 <!-- welcome section -->
-        <section id="welcome" class="welcome">
+        <section id="welcome" class="welcome houdini-mix">
             <div class="container">
                 <div class="row">
                     <div class="welcome-text">
@@ -423,6 +423,16 @@
     <script src="./assets/js/hamburger.js"></script>
     <script src="./assets/js/color-nav.js"></script>
     <script src="./assets/js/theme.js"></script>
+
+    <!-- CDN polyfill link to add support for firefox and safari -->
+    <script src="https://unpkg.com/css-paint-polyfill"></script>
+
+    <!-- houdini paint worklet -->
+    <script>
+        if (CSS.paintWorklet) {
+            CSS.paintWorklet.addModule("./assets/js/worklet_mix.js");
+        }
+    </script>
 
 </body>
 </html>

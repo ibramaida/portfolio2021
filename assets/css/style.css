@@ -485,6 +485,21 @@ ul{
   }
 
 
+  /* Houdini paint custom properties */
+  .houdini-mix {
+    --houdini-mix-min-snow: 15;
+    --houdini-mix-max-snow: 30;
+    --houdini-mix-min-triangle: 50;
+    --houdini-mix-max-triangle: 100;
+    --houdini-mix-fill: full;
+    --houdini-mix-flakes: 30;
+    --houdini-mix-triangles: 40;
+    --houdini-mix-snow-hue: var(--hue2);
+    --houdini-mix-triangle-hue: var(--hue);
+    background-image: paint(houdini-mix);
+  }
+
+
 
   
     /* navbar/vertical */
@@ -1243,6 +1258,17 @@ ul{
 
     @media (max-width: 901px) {
 
+      /* Houdini paint custom properties */
+      .houdini-mix {
+        --houdini-mix-min-snow: 10;
+        --houdini-mix-max-snow: 20;
+        --houdini-mix-min-triangle: 40;
+        --houdini-mix-max-triangle: 80;
+        --houdini-mix-fill: full;
+        --houdini-mix-flakes: 20;
+        --houdini-mix-triangles: 30;
+      }
+
       section {
         padding-top: 6rem ;
       }
@@ -1344,6 +1370,17 @@ ul{
     }
 
     @media (max-width: 500px) {
+
+      /* Houdini paint custom properties */
+      .houdini-mix {
+        --houdini-mix-min-snow: 5;
+        --houdini-mix-max-snow: 15;
+        --houdini-mix-min-triangle: 30;
+        --houdini-mix-max-triangle: 60;
+        --houdini-mix-fill: full;
+        --houdini-mix-flakes: 15;
+        --houdini-mix-triangles: 20;
+      }
       
       .navbar {
         flex-direction: column;
