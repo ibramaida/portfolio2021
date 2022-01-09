@@ -605,14 +605,34 @@ ul{
     .btn-color-menu{
       position: absolute;
       top: 0;
-      right: -10px;
-      width: 3rem;
+      right: 10px;
+      width: 2rem;
       aspect-ratio: 1;
-      transform: skewX(-15deg);
       background-color: var(--primary-color);
+      border-radius: 2px;
       cursor: pointer;
       z-index: 10;
     }
+
+    .btn-color-menu::after{
+      content: "";
+      position: absolute;
+      inset: .5rem;
+      border-left: 4px solid var(--text-color);
+      border-bottom: 4px solid var(--text-color);
+      border-radius: 2px;
+      transform: translateX(4px) rotate(45deg);
+      transition: transform 250ms ease;
+    }
+
+    .btn-color-menu:hover::after  {
+      opacity: .8;
+    }
+
+    .btn-color-menu.active::after {
+      transform: translateX(-4px) rotate(225deg);   
+    }
+
 
     .color-navigation {
       position: absolute;
@@ -620,11 +640,8 @@ ul{
       right: 0;
       z-index: 5;
       padding-right: 4rem;
-      padding-left: 1rem;
-      line-height: .5;
       display: flex;
-      gap: 1rem;
-      background-color: var(--bg-color);
+      gap: var(--color-nav-gap, 1rem);
       transform: translateX(100%);
       transition: all 350ms ease-in-out;
     }
@@ -634,9 +651,9 @@ ul{
     }
 
     .color-item {
-      width: 1.5rem;
-      height: 3rem;
-      transform: skewX(-15deg);
+      width: 2rem;
+      aspect-ratio: 1;
+      border-radius: 2px;
       cursor: pointer;
     }
 
@@ -1380,6 +1397,11 @@ ul{
         --houdini-mix-fill: full;
         --houdini-mix-flakes: 15;
         --houdini-mix-triangles: 20;
+      }
+
+      .color-navigation {
+        --color-nav-gap: .5rem;
+        padding-right: 3.125rem;
       }
       
       .navbar {

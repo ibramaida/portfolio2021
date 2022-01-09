@@ -9,10 +9,12 @@ window.onload = () => {
 
 const  closeNav = () => {
     colorNav.classList.remove('show')
+    colorToggle.classList.remove('active')
 }
 
 const openNav = () => {
     colorNav.classList.add('show')
+    colorToggle.classList.add('active')
 }
 
 colorToggle.addEventListener('click', () => {
